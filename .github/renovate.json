@@ -1,4 +1,36 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ScribeMD/.github#0.7.4"]
+  "description": "Minimal reproduction for Renovate debugging",
+  "extends": ["config:base"],
+  "dependencyDashboardApproval": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["[Mm]ega-?[Ll]inter"],
+      "groupName": "MegaLinter"
+    },
+    {
+      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
+      "semanticCommitType": "fix"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
+      "matchStrings": [
+        "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v(\\d+\\.){2}\\d+)"
+      ],
+      "depNameTemplate": "MegaLinter",
+      "packageNameTemplate": "oxsecurity/megalinter-{{{flavor}}}",
+      "datasourceTemplate": "docker",
+      "depTypeTemplate": "devDependencies"
+    },
+    {
+      "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
+      "matchStrings": [
+        "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
+      ],
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "devDependencies"
+    }
+  ]
 }
