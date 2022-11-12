@@ -5,7 +5,7 @@
   "dependencyDashboardApproval": true,
   "packageRules": [
     {
-      "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
+      "matchFiles": [".pre-commit-hooks.yaml"],
       "semanticCommitType": "fix"
     }
   ],
