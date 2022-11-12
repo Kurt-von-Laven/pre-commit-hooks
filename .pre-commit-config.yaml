@@ -20,11 +20,6 @@ repos:
     rev: 0.15.0 # automatically updated by Commitizen
     hooks:
       - id: no-merge-commits
-      - id: asdf-install
-      - id: poetry-check
-      - id: poetry-lock
-      - id: poetry-install
-      - id: pre-commit-install
       - id: megalinter-incremental
         args: &megalinter-args [--flavor, documentation, --release, v6.13.0]
       - id: megalinter-full
