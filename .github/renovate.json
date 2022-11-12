@@ -5,7 +5,7 @@
   "dependencyDashboardApproval": true,
   "packageRules": [
     {
-      "matchFiles": ["README.md"],
+      "matchFiles": [".pre-commit-hooks.yaml"],
       "semanticCommitType": "fix"
     }
   ],
