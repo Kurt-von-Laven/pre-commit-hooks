@@ -5,10 +5,6 @@
   "dependencyDashboardApproval": true,
   "packageRules": [
     {
-      "matchPackagePatterns": ["[Mm]ega-?[Ll]inter"],
-      "groupName": "MegaLinter"
-    },
-    {
       "matchFiles": [".pre-commit-hooks.yaml", "action.yaml"],
       "semanticCommitType": "fix"
     }
