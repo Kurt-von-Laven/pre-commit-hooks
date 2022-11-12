@@ -11,16 +11,6 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^\\.pre-commit-config\\.yaml$"],
-      "matchStrings": [
-        "args:\\s*&megalinter-args\\s*\\[--flavor,\\s*(?<flavor>\\w+),\\s*--release,\\s*(?<currentValue>v(\\d+\\.){2}\\d+)"
-      ],
-      "depNameTemplate": "MegaLinter",
-      "packageNameTemplate": "oxsecurity/megalinter-{{{flavor}}}",
-      "datasourceTemplate": "docker",
-      "depTypeTemplate": "devDependencies"
-    },
-    {
       "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
       "matchStrings": [
         "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
