@@ -9,7 +9,7 @@
   "packageRules": [
     {
       "matchFiles": [".tools"],
-      "semanticCommitType": "fix"
+      "semanticCommitType": "chore"
     }
   ]
 }
