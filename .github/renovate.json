@@ -3,13 +3,20 @@
   "description": "Minimal reproduction for Renovate debugging",
   "extends": ["config:base"],
   "dependencyDashboardApproval": true,
-  "asdf": {
-    "fileMatch": ["^\\.tools$"]
-  },
   "packageRules": [
     {
-      "matchFiles": [".tools"],
+      "matchFiles": [".pre-commit-hooks.yaml"],
       "semanticCommitType": "fix"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.pre-commit-hooks\\.yaml$", "^README\\.md$"],
+      "matchStrings": [
+        "(?<depName>mega-linter-runner)@v(?<currentValue>(\\d+\\.){2}\\d+)"
+      ],
+      "datasourceTemplate": "npm",
+      "depTypeTemplate": "devDependencies"
     }
   ]
 }
