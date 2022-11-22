@@ -2,3 +2,4 @@
 filesonly
 Laven
 oxsecurity
+renovatebot
