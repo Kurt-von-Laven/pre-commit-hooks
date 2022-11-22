@@ -24,7 +24,7 @@ Hooks for Use With the [pre-commit](https://pre-commit.com) Framework
 
 This is a minimal reproduction for renovatebot/renovate#18834. The commit type
 of fix should be used to bump mega-linter-runner, but chore is used instead.
-See #3.
+See Kurt-von-Laven/pre-commit-hooks#3.
 
 ## Changelog
 
