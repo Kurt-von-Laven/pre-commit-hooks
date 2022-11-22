@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Minimal reproduction for Renovate debugging",
+  "extends": ["config:base"],
   "packageRules": [
     {
       "matchFiles": [".pre-commit-hooks.yaml"],
